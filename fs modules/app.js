@@ -17,3 +17,5 @@ fs.readFile('./msg.txt', 'utf-8', (err, data)=>{
         console.log("Data is writen to the file")
     })
 })
+
+ 
