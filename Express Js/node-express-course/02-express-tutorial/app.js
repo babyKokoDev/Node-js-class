@@ -12,7 +12,11 @@ app.get('/api/products/:productID', (req, res)=>{
     const singleProduct = products.find((product)=>{
        return product.id === Number(productID)
     })
-    res.json(singleProduct)
+    if (singleProduct){
+        res.status(200).json(singleProduct)
+    }else {
+        res.status(404).send(`<h1>Product does not exist</h1>`)
+    }
 })
 
 
