@@ -19,6 +19,11 @@ app.get('/api/products/:productID', (req, res)=>{
     }
 })
 
+app.get('/api/v1/query', (req, res)=>{
+    console.log(req.query)
+    res.send(`<h1>Home Page</h1>`)
+})
+
 
 
 
