@@ -1,9 +1,11 @@
 const express = require('express');
 const app = express();
+const {products} = require('./data')
 
 
 app.get('/', (req, res)=>{
-    res.status(200).json([{name : 'Elijah'}, {name : 'Tunde'}])
+    const newProducts = products.json()
+   res.status(200).json(newProducts)
 })
 
 
